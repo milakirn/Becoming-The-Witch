@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
     private float _horizontal = 0f;
     private const float k_speedMultiplier = 50f;
 
-    private bool isGround = false;
-    private bool isJump = false;
+    private bool _isGround = false;
+    private bool _isJump = false;
 
     private Rigidbody2D _rb;
 
@@ -29,9 +29,9 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         _horizontal = Input.GetAxis("Horizontal");
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) && isGround)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) && _isGround)
         {
-            isJump = true;
+            _isJump = true;
         }
 
         if (_horizontal >= 0)
@@ -47,11 +47,11 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         _rb.velocity = new Vector2(_horizontal * _speedX * k_speedMultiplier * Time.fixedDeltaTime, _rb.velocity.y);
-        if (isJump)
+        if (_isJump)
         {
             _rb.AddForce(new Vector2(0f, _force));
-            isGround = false;
-            isJump = false;
+            _isGround = false;
+            _isJump = false;
             // Debug.Log("Jumping");
         }
     }
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            isGround = true;
+            _isGround = true;
         }
     }
 }
