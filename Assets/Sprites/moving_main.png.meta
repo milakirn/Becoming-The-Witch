@@ -136,7 +136,7 @@ TextureImporter:
         width: 476
         height: 713
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,7 +157,7 @@ TextureImporter:
         width: 483
         height: 714
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_2
+      name: goLeft1
       rect:
         serializedVersion: 2
         x: 58
@@ -178,7 +178,7 @@ TextureImporter:
         width: 483
         height: 711
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_3
+      name: goLeft2
       rect:
         serializedVersion: 2
         x: 661
@@ -199,7 +199,7 @@ TextureImporter:
         width: 478
         height: 716
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_4
+      name: goLeft3
       rect:
         serializedVersion: 2
         x: 1259
@@ -220,7 +220,7 @@ TextureImporter:
         width: 483
         height: 712
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_5
+      name: goLeft4
       rect:
         serializedVersion: 2
         x: 1857
@@ -241,7 +241,7 @@ TextureImporter:
         width: 484
         height: 710
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_6
+      name: attackStaffLeft1
       rect:
         serializedVersion: 2
         x: 76
@@ -262,7 +262,7 @@ TextureImporter:
         width: 484
         height: 710
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_7
+      name: attackStaffLeft2
       rect:
         serializedVersion: 2
         x: 691
@@ -283,7 +283,7 @@ TextureImporter:
         width: 439
         height: 712
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,7 +296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_8
+      name: attackStaffLeft3
       rect:
         serializedVersion: 2
         x: 1259
@@ -304,7 +304,7 @@ TextureImporter:
         width: 483
         height: 713
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -317,7 +317,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_9
+      name: posionLeft1
       rect:
         serializedVersion: 2
         x: 79
@@ -325,7 +325,7 @@ TextureImporter:
         width: 481
         height: 712
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -338,7 +338,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_10
+      name: posionLeft2
       rect:
         serializedVersion: 2
         x: 660
@@ -346,7 +346,7 @@ TextureImporter:
         width: 482
         height: 712
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -359,7 +359,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_11
+      name: posionLeft3
       rect:
         serializedVersion: 2
         x: 1236
@@ -367,7 +367,7 @@ TextureImporter:
         width: 485
         height: 713
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -380,15 +380,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_12
+      name: posionLeft4
       rect:
         serializedVersion: 2
-        x: 1819
-        y: 171
+        x: 1813
+        y: 183
         width: 482
         height: 710
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -401,7 +401,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_13
+      name: goRight1
       rect:
         serializedVersion: 2
         x: 3298
@@ -409,7 +409,7 @@ TextureImporter:
         width: 484
         height: 712
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -422,7 +422,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_14
+      name: goRight2
       rect:
         serializedVersion: 2
         x: 3861
@@ -430,7 +430,7 @@ TextureImporter:
         width: 480
         height: 710
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -443,7 +443,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_15
+      name: goRight3
       rect:
         serializedVersion: 2
         x: 4417
@@ -451,7 +451,7 @@ TextureImporter:
         width: 525
         height: 709
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -464,7 +464,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_16
+      name: goRight4
       rect:
         serializedVersion: 2
         x: 5059
@@ -472,7 +472,7 @@ TextureImporter:
         width: 482
         height: 711
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -485,7 +485,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_17
+      name: attackStaffRight1
       rect:
         serializedVersion: 2
         x: 3299
@@ -493,7 +493,7 @@ TextureImporter:
         width: 482
         height: 711
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -506,7 +506,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_18
+      name: attackStaffRight2
       rect:
         serializedVersion: 2
         x: 3909
@@ -514,7 +514,7 @@ TextureImporter:
         width: 442
         height: 712
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -527,7 +527,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_19
+      name: attackStaffRight3
       rect:
         serializedVersion: 2
         x: 4483
@@ -535,7 +535,7 @@ TextureImporter:
         width: 479
         height: 711
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -548,15 +548,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_20
+      name: posionRight1
       rect:
         serializedVersion: 2
         x: 3299
-        y: 169
+        y: 150
         width: 481
         height: 711
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -569,7 +569,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_21
+      name: posionRight2
       rect:
         serializedVersion: 2
         x: 3941
@@ -577,7 +577,7 @@ TextureImporter:
         width: 480
         height: 711
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -590,7 +590,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_22
+      name: posionRight3
       rect:
         serializedVersion: 2
         x: 4579
@@ -598,7 +598,7 @@ TextureImporter:
         width: 483
         height: 713
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -611,7 +611,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moving_main_23
+      name: posionRight4
       rect:
         serializedVersion: 2
         x: 5221
@@ -619,7 +619,7 @@ TextureImporter:
         width: 480
         height: 710
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -642,30 +642,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      moving_main_17: 380589645
-      moving_main_13: 235540652
+      posionLeft3: 1003613843
+      posionLeft4: -2006812966
+      posionRight3: 1143113786
       moving_main_1: -1331175199
-      moving_main_8: 447835120
-      moving_main_9: -154751106
-      moving_main_2: 1888743385
-      moving_main_22: 1143113786
-      moving_main_3: -301829491
-      moving_main_18: 741101210
-      moving_main_4: -890162828
-      moving_main_19: 1032220123
+      goLeft2: -301829491
+      posionRight2: 1122305755
+      attackStaffLeft3: 447835120
+      attackStaffRight1: 380589645
+      goLeft1: 1888743385
+      goRight2: -1785795359
+      goLeft3: -890162828
       moving_main_0: -1355854811
-      moving_main_16: 680249320
-      moving_main_14: -1785795359
-      moving_main_7: -353861181
-      moving_main_10: -1670568100
-      moving_main_15: -524894798
-      moving_main_6: -1583848601
-      moving_main_21: 1122305755
-      moving_main_11: 1003613843
-      moving_main_12: -2006812966
-      moving_main_23: 254995982
-      moving_main_5: 1178090462
-      moving_main_20: -1741421062
+      attackStaffRight2: 741101210
+      goRight4: 680249320
+      posionLeft1: -154751106
+      posionLeft2: -1670568100
+      goRight1: 235540652
+      attackStaffRight3: 1032220123
+      goRight3: -524894798
+      posionRight1: -1741421062
+      posionRight4: 254995982
+      goLeft4: 1178090462
+      attackStaffLeft1: -1583848601
+      attackStaffLeft2: -353861181
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

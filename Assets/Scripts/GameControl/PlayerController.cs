@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         _horizontal = Input.GetAxis("Horizontal");
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) && _isGround)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) && _isGround)
         {
             _isJump = true;
         }
