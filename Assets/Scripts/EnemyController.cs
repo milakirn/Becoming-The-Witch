@@ -8,21 +8,29 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    [Tooltip("Patrol Distance")]
     [SerializeField] private float _walkDistance;
-    [SerializeField] private float _walkSpeed;
+    [SerializeField] private float _patrolSpeed;
+    [SerializeField] private float _chasingSpeed;
+    [Tooltip("Time enemy wait before continue patrol")]
     [SerializeField] private float _timeToWait;
+    [SerializeField] private float _timeToChase;
+    [Tooltip("Minimal distance to start chasing")]
     [SerializeField] private float _minDistanceToPlayer;
 
     private Rigidbody2D _rb;
     private Transform _playerTransform;
     private Vector2 _leftBoundryPosition;
     private Vector2 _rightBoundryPosition;
-    private Vector2 nextPoint;
+    private Vector2 _nextPoint;
 
     private bool _isFacingRight = true;
     private bool _isWait = false;
-    private float _waitTime;
     private bool _isChasingPlayer;
+
+    private float _walkSpeed;
+    private float _waitTime;
+    private float _chaseTime;
 
 
     public bool IsFacingRight
@@ -31,10 +39,6 @@ public class EnemyController : MonoBehaviour
     }
 
 
-    public void StartChasingPlayer()
-    {
-        _isChasingPlayer = true;
-    }
 
     private void Start() 
     {
@@ -45,13 +49,20 @@ public class EnemyController : MonoBehaviour
         _rightBoundryPosition = _leftBoundryPosition + (Vector2.right * _walkDistance);
 
         _waitTime = _timeToWait;
+        _chaseTime = _timeToChase;
+        _walkSpeed = _patrolSpeed;
  }
 
-    private void Update() {
+    private void Update() 
+    {
+        if (_isChasingPlayer)
+        {
+            StartChasingTimer();
+        }
 
         if (_isWait && !_isChasingPlayer)
         {
-            Wait();
+            StartWaitTimer();
         }
 
         if (ShouldWait())
@@ -64,9 +75,9 @@ public class EnemyController : MonoBehaviour
 
     private void FixedUpdate() {
 
-        nextPoint = Vector2.right * _walkSpeed * Time.fixedDeltaTime;
+        _nextPoint = Vector2.right * _walkSpeed * Time.fixedDeltaTime;
 
-        if (Mathf.Abs(DistanceToPlayer()) < _minDistanceToPlayer)
+        if (_isChasingPlayer && Mathf.Abs(DistanceToPlayer()) < _minDistanceToPlayer)
         {
             return;
         }
@@ -82,14 +93,20 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    public void StartChasingPlayer()
+    {
+        _isChasingPlayer = true;
+        _chaseTime = _timeToChase;
+        _walkSpeed = _chasingSpeed;;
+    }
     private void Patrol() 
     {
         if (!_isFacingRight)
         {
-            nextPoint.x *= -1;
+            _nextPoint.x *= -1;
         }
 
-        _rb.MovePosition((Vector2)transform.position + nextPoint);
+        _rb.MovePosition((Vector2)transform.position + _nextPoint);
     }
 
     private void ChasePlayer()
@@ -98,7 +115,7 @@ public class EnemyController : MonoBehaviour
 
         if (distance < 0)
         {
-            nextPoint.x *= -1;
+            _nextPoint.x *= -1;
         }
 
         if (distance > 0.2f && !_isFacingRight)
@@ -109,7 +126,7 @@ public class EnemyController : MonoBehaviour
         {
             Flip();
         }
-        _rb.MovePosition((Vector2)transform.position + nextPoint);
+        _rb.MovePosition((Vector2)transform.position + _nextPoint);
 
     }
 
@@ -118,14 +135,27 @@ public class EnemyController : MonoBehaviour
         return _playerTransform.position.x - transform.position.x;
     }
 
-    private void Wait() 
+    private void StartWaitTimer() 
     {
         _waitTime -= Time.deltaTime;
+        
         if (_waitTime < 0f)
         {
             _waitTime = _timeToWait;
             _isWait = false;
             Flip();
+        }
+    }
+
+    private void StartChasingTimer()
+    {
+        _chaseTime -= Time.deltaTime;
+
+        if (_chaseTime < 0f)
+        {
+            _isChasingPlayer = false;
+            _chaseTime = _timeToChase;
+            _walkSpeed = _patrolSpeed;
         }
     }
 
