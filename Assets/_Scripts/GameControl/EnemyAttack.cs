@@ -21,7 +21,7 @@ public class EnemyAttack : MonoBehaviour
         if (!_isDamage)
         {
             _damageTime -= Time.deltaTime;
-            if (_damageTime < 0f)
+            if (_damageTime <= 0f)
             {
                 _isDamage = true;
                 _damageTime = timeToDamage;
@@ -29,7 +29,7 @@ public class EnemyAttack : MonoBehaviour
         }    
     }
 
-    private void OnCollisionEnter2D(Collision2D other) 
+    private void OnCollisionStay2D(Collision2D other) 
     {
         PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
 

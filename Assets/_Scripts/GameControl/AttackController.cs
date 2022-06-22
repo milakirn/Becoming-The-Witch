@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class AttackController : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
+    private Animator _animator;
     private bool _isAttack;
 
-    public bool isAttack {get => _isAttack;}
+    public bool IsAttack {get => _isAttack ; }
+    private void Start() 
+    {
+        _animator = GetComponent<Animator>();
+    }
 
     private void Update() 
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             _isAttack = true;
-            animator.SetTrigger("attack");
-            Debug.Log("Attack");
+            _animator.SetTrigger("attack");
         }    
+    }
+
+    public void FinishAttack () 
+    {
+        _isAttack = false;    
     }
 
 }

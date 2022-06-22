@@ -12,10 +12,10 @@ public class Weapon : MonoBehaviour
         _attackController = transform.root.GetComponent<AttackController>();    
     }
 
-    private void OnTriggerEnter2D(Collider2D other) 
+    private void OnTriggerEnter2D(Collider2D other)
     {
         EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
-        if (enemyHealth != null && _attackController.isAttack)
+        if (enemyHealth != null && _attackController.IsAttack)
         {
             enemyHealth.ReduceHealth(damage);
             Debug.Log("Take damage");
