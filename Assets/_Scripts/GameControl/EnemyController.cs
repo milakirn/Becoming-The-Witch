@@ -17,6 +17,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float timeToChase;
     [Tooltip("Minimal distance to start chasing")]
     [SerializeField] private float minDistanceToPlayer;
+    [SerializeField] private Transform enemyModelTransform;
 
     private Rigidbody2D _rb;
     private Transform _playerTransform;
@@ -37,8 +38,6 @@ public class EnemyController : MonoBehaviour
     {
         get => _isFacingRight;
     }
-
-
 
     private void Start() 
     {
@@ -177,6 +176,6 @@ public class EnemyController : MonoBehaviour
         _isFacingRight = !_isFacingRight;
         Vector3 playerScale = transform.localScale;
         playerScale.x *= -1;
-        transform.localScale = playerScale;
+        enemyModelTransform.localScale = playerScale;
     }
 }
