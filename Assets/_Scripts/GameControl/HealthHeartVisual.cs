@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class HealthHeartVisual : MonoBehaviour
 {
-    [SerializeField] private Sprite _fullHeartSprite;
-    [SerializeField] private Sprite _halfHeartSprite;
+    [SerializeField] private Sprite fullHeartSprite;
+    [SerializeField] private Sprite halfHeartSprite;
 
     private List<HeartImage> _heartImageList;
 
@@ -36,7 +36,7 @@ public class HealthHeartVisual : MonoBehaviour
  
         //Set heart sprite
         Image heartImageUI = heartGameObject.GetComponent<Image>();
-        heartImageUI.sprite = _fullHeartSprite;
+        heartImageUI.sprite = fullHeartSprite;
 
         HeartImage heartImage = new HeartImage(heartImageUI);
         _heartImageList.Add(heartImage);
@@ -68,10 +68,10 @@ public class HealthHeartVisual : MonoBehaviour
             switch (fragments) 
             {
                 case 0:
-                    _heartImage.sprite = _healthHeartVisual._fullHeartSprite;
+                    _heartImage.sprite = _healthHeartVisual.fullHeartSprite;
                     break;
                 case 1:
-                    _heartImage.sprite = _healthHeartVisual._halfHeartSprite;
+                    _heartImage.sprite = _healthHeartVisual.halfHeartSprite;
                     break;
             }    
         }

@@ -402,7 +402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9680176, y: 9.137238, z: -220.66174}
+  m_LocalPosition: {x: -0.9680176, y: 10.536835, z: -220.66174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -578,10 +578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c05a0f6bcd70b784aa0e5bb2b1924738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _leftSide: {fileID: -1355854811, guid: b0f7c3ab39cacac4fa8aa0f583cf8668, type: 3}
-  _rightSide: {fileID: -1331175199, guid: b0f7c3ab39cacac4fa8aa0f583cf8668, type: 3}
-  _speedX: 10
-  _force: 1500
+  speedX: 10
+  force: 1500
 --- !u!50 &583448327
 Rigidbody2D:
   serializedVersion: 4
@@ -651,7 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27f5e267d48b404fbc8dc7e74f84e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 583448329}
+  animator: {fileID: 583448329}
 --- !u!114 &583448331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,7 +662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398379074d3ebc5458e6f92309d0917d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 100
+  health: 100
 --- !u!1 &663589587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,7 +1085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691a71846b39e89418e97c54a54365bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 20
+  damage: 20
 --- !u!1 &1505397070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,6 +1101,7 @@ GameObject:
   - component: {fileID: 1505397073}
   - component: {fileID: 1505397076}
   - component: {fileID: 1505397077}
+  - component: {fileID: 1505397078}
   m_Layer: 0
   m_Name: slime
   m_TagString: Enemy
@@ -1189,12 +1188,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8554c93beb7d9ad469a9abb3218ce509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _walkDistance: 8
-  _patrolSpeed: 1
-  _chasingSpeed: 6
-  _timeToWait: 3
-  _timeToChase: 3
-  _minDistanceToPlayer: 5
+  walkDistance: 10
+  patrolSpeed: 2
+  chasingSpeed: 5
+  timeToWait: 3
+  timeToChase: 3
+  minDistanceToPlayer: 8
 --- !u!50 &1505397074
 Rigidbody2D:
   serializedVersion: 4
@@ -1244,10 +1243,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9637a50751ba34cb479d8e54067f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentHitObject: {fileID: 0}
-  _circleRadius: 1
+  currentHitObject: {fileID: 0}
+  circleRadius: 0
   _maxDistance: 10
-  _layerMask:
+  layerMask:
     serializedVersion: 2
     m_Bits: 64
 --- !u!114 &1505397077
@@ -1262,7 +1261,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b59c22b7007b7a4f81062748c60d469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 100
+  health: 100
+--- !u!95 &1505397078
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505397070}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 39c1224105786e64894a054fccbef523, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1560214127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,7 +1345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1560214127}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9680176, y: 9.137238, z: -220.66174}
+  m_LocalPosition: {x: -0.9680176, y: 10.536835, z: -220.66174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1557,7 +1576,7 @@ MonoBehaviour:
   m_ZDamping: 1
   m_TargetMovementOnly: 0
   m_ScreenX: 0.5
-  m_ScreenY: 0.45
+  m_ScreenY: 0.5
   m_CameraDistance: 10
   m_DeadZoneWidth: 0.08625
   m_DeadZoneHeight: 0.07
@@ -1566,7 +1585,7 @@ MonoBehaviour:
   m_SoftZoneWidth: 0.6437516
   m_SoftZoneHeight: 0.6555566
   m_BiasX: -0.00000010691385
-  m_BiasY: 0.00000031068
+  m_BiasY: 0.00000030537427
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0

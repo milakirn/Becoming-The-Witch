@@ -5,15 +5,15 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
 
-    [SerializeField] private float _damage = 20f;   
-    [SerializeField] private float _timeToDamage = 1f;
+    [SerializeField] private float damage = 20f;   
+    [SerializeField] private float timeToDamage = 1f;
 
     private float _damageTime;
     private bool _isDamage = true;
 
     private void Start() 
     {
-        _damageTime = _timeToDamage;
+        _damageTime = timeToDamage;
     }
 
     private void Update()
@@ -24,7 +24,7 @@ public class EnemyAttack : MonoBehaviour
             if (_damageTime < 0f)
             {
                 _isDamage = true;
-                _damageTime = _timeToDamage;
+                _damageTime = timeToDamage;
             }
         }    
     }
@@ -35,7 +35,7 @@ public class EnemyAttack : MonoBehaviour
 
         if (playerHealth != null && _isDamage)
         {
-            playerHealth.ReduceHealth(_damage);
+            playerHealth.ReduceHealth(damage);
             _isDamage = false;
         }
     }

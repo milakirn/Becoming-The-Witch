@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private float _health = 100f;
+    [SerializeField] private float health = 100f;
     private Animator _animator;
 
     private void Start() 
@@ -14,9 +14,9 @@ public class PlayerHealth : MonoBehaviour
 
     public void ReduceHealth (float damage) 
     {
-        _health -= damage;
+        health -= damage;
 
-        if (_health <= 0f)
+        if (health <= 0f)
         {
             Die();
             Debug.Log("Hero die");

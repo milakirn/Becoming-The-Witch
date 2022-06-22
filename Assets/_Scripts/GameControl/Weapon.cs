@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] private float _damage = 20f;
+    [SerializeField] private float damage = 20f;
     private AttackController _attackController;
 
     private void Start() 
@@ -17,7 +17,7 @@ public class Weapon : MonoBehaviour
         EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
         if (enemyHealth != null && _attackController.isAttack)
         {
-            enemyHealth.ReduceHealth(_damage);
+            enemyHealth.ReduceHealth(damage);
             Debug.Log("Take damage");
         }    
     }

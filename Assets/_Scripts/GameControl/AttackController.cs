@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackController : MonoBehaviour
 {
-    [SerializeField] private Animator _animator;
+    [SerializeField] private Animator animator;
     private bool _isAttack;
 
     public bool isAttack {get => _isAttack;}
@@ -14,7 +14,7 @@ public class AttackController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _isAttack = true;
-            _animator.SetTrigger("attack");
+            animator.SetTrigger("attack");
             Debug.Log("Attack");
         }    
     }

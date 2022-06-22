@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class EnemyVision : MonoBehaviour
 {
-    [SerializeField] private GameObject _currentHitObject;
+    [SerializeField] private GameObject currentHitObject;
 
-    [SerializeField] private float _circleRadius;
+    [SerializeField] private float circleRadius;
     [SerializeField] private float _maxDistance;
-    [SerializeField] private LayerMask _layerMask;
+    [SerializeField] private LayerMask layerMask;
 
     private EnemyController _enemyController;
     private Vector2 _origin;
@@ -34,20 +34,20 @@ public class EnemyVision : MonoBehaviour
             _direction = Vector2.left;
         }
 
-        RaycastHit2D hit = Physics2D.CircleCast(_origin, _circleRadius, _direction, _maxDistance, _layerMask);
+        RaycastHit2D hit = Physics2D.CircleCast(_origin, circleRadius, _direction, _maxDistance, layerMask);
 
         if (hit)
         {
-            _currentHitObject = hit.transform.gameObject;
+            currentHitObject = hit.transform.gameObject;
             _currentHitDistance = hit.distance;
-            if (_currentHitObject.CompareTag("Player"))
+            if (currentHitObject.CompareTag("Player"))
             {
                _enemyController.StartChasingPlayer(); 
             }
         }
         else
         {
-            _currentHitObject = null;
+            currentHitObject = null;
             _currentHitDistance = _maxDistance;
         }
     }
@@ -56,7 +56,7 @@ public class EnemyVision : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(_origin, _origin + _direction * _currentHitDistance);
-        Gizmos.DrawWireSphere(_origin + _direction * _currentHitDistance, _circleRadius);
+        Gizmos.DrawWireSphere(_origin + _direction * _currentHitDistance, circleRadius);
     }
 
 }

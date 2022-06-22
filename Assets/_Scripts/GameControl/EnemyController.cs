@@ -9,14 +9,14 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [Tooltip("Patrol Distance")]
-    [SerializeField] private float _walkDistance;
-    [SerializeField] private float _patrolSpeed;
-    [SerializeField] private float _chasingSpeed;
+    [SerializeField] private float walkDistance;
+    [SerializeField] private float patrolSpeed;
+    [SerializeField] private float chasingSpeed;
     [Tooltip("Time enemy wait before continue patrol")]
-    [SerializeField] private float _timeToWait;
-    [SerializeField] private float _timeToChase;
+    [SerializeField] private float timeToWait;
+    [SerializeField] private float timeToChase;
     [Tooltip("Minimal distance to start chasing")]
-    [SerializeField] private float _minDistanceToPlayer;
+    [SerializeField] private float minDistanceToPlayer;
 
     private Rigidbody2D _rb;
     private Transform _playerTransform;
@@ -46,11 +46,11 @@ public class EnemyController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
 
         _leftBoundryPosition = transform.position;
-        _rightBoundryPosition = _leftBoundryPosition + (Vector2.right * _walkDistance);
+        _rightBoundryPosition = _leftBoundryPosition + (Vector2.right * walkDistance);
 
-        _waitTime = _timeToWait;
-        _chaseTime = _timeToChase;
-        _walkSpeed = _patrolSpeed;
+        _waitTime = timeToWait;
+        _chaseTime = timeToChase;
+        _walkSpeed = patrolSpeed;
  }
 
     private void Update() 
@@ -77,7 +77,7 @@ public class EnemyController : MonoBehaviour
 
         _nextPoint = Vector2.right * _walkSpeed * Time.fixedDeltaTime;
 
-        if (_isChasingPlayer && Mathf.Abs(DistanceToPlayer()) < _minDistanceToPlayer)
+        if (_isChasingPlayer && Mathf.Abs(DistanceToPlayer()) < minDistanceToPlayer)
         {
             return;
         }
@@ -96,8 +96,8 @@ public class EnemyController : MonoBehaviour
     public void StartChasingPlayer()
     {
         _isChasingPlayer = true;
-        _chaseTime = _timeToChase;
-        _walkSpeed = _chasingSpeed;;
+        _chaseTime = timeToChase;
+        _walkSpeed = chasingSpeed;;
     }
     private void Patrol() 
     {
@@ -141,7 +141,7 @@ public class EnemyController : MonoBehaviour
         
         if (_waitTime < 0f)
         {
-            _waitTime = _timeToWait;
+            _waitTime = timeToWait;
             _isWait = false;
             Flip();
         }
@@ -154,8 +154,8 @@ public class EnemyController : MonoBehaviour
         if (_chaseTime < 0f)
         {
             _isChasingPlayer = false;
-            _chaseTime = _timeToChase;
-            _walkSpeed = _patrolSpeed;
+            _chaseTime = timeToChase;
+            _walkSpeed = patrolSpeed;
         }
     }
 

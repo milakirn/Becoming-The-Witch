@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] private float _health = 100f;
+    [SerializeField] private float health = 100f;
 
     public void ReduceHealth (float damage) 
     {
-        _health -= damage;
+        health -= damage;
 
-        if (_health <= 0f)
+        if (health <= 0f)
         {
             Die();
             Debug.Log("Enemy die");
