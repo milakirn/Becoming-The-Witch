@@ -1,9 +1,3 @@
-using System.Reflection.Emit;
-using System.Runtime.CompilerServices;
-using System.Net.Sockets;
-using System.IO.IsolatedStorage;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
