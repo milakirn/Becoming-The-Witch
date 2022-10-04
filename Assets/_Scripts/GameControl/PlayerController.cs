@@ -67,6 +67,9 @@ public class PlayerController : MonoBehaviour
                 _animator.SetFloat("Speed", _horizontal);
                 break;
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift)) speedX += 3;
+        if (Input.GetKeyUp(KeyCode.LeftShift)) speedX -= 3;
         
     }
 

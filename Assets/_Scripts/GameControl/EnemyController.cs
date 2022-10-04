@@ -128,7 +128,7 @@ public class EnemyController : MonoBehaviour
         return _playerTransform.position.x - transform.position.x;
     }
 
-    private void StartWaitTimer() 
+    public void StartWaitTimer() 
     {
         _waitTime -= Time.deltaTime;
         
@@ -168,7 +168,7 @@ public class EnemyController : MonoBehaviour
     private void Flip()
     {
         _isFacingRight = !_isFacingRight;
-        Vector3 playerScale = transform.localScale;
+        Vector3 playerScale = enemyModelTransform.localScale;
         playerScale.x *= -1;
         enemyModelTransform.localScale = playerScale;
     }
